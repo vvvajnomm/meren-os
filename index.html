@@ -320,6 +320,66 @@ body.cloud-ready #cloud-gate{display:none}
 #cloud-indicator .sync-warn{color:#967000}
 @media(max-width:760px){.cloud-login{padding:25px 20px}#cloud-indicator{position:fixed;top:12px;right:14px;z-index:9;background:rgba(255,255,255,.7);border:1px solid #fff;padding:5px 9px;border-radius:15px;backdrop-filter:blur(14px)}body.cloud-ready .brand{padding-right:155px}}
 
+
+
+/* Meren mobile layout repair — cloud-safe; no data/storage changes */
+@media (max-width:760px){
+  html,body{width:100%;max-width:100%;overflow-x:clip}
+  body{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))!important}
+  .app{display:block!important;min-height:100dvh;grid-template-columns:minmax(0,1fr)!important}
+  .aside{position:static!important;height:58px!important;min-height:58px!important;width:100%!important;padding:12px 18px 0!important;border:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;z-index:auto!important}
+  .brand{position:relative!important;padding:0!important;margin:0!important;width:auto!important;max-width:100%!important;min-height:35px!important}
+  .brand h1{font-size:26px!important;line-height:1.1!important;margin:0!important}
+  .brand-sub,.brand:after{display:none!important}
+  .aside-foot{display:none!important}
+  .nav{position:fixed!important;top:auto!important;left:10px!important;right:10px!important;bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;width:auto!important;height:65px!important;min-height:65px!important;padding:6px 5px!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;align-items:center!important;gap:1px!important;overflow:visible!important;border-radius:22px!important;border:1px solid rgba(255,255,255,.8)!important;background:rgba(255,255,255,.76)!important;box-shadow:0 8px 26px rgba(118,101,31,.15),inset 0 1px 0 rgba(255,255,255,.9)!important;backdrop-filter:blur(24px) saturate(150%)!important;-webkit-backdrop-filter:blur(24px) saturate(150%)!important;z-index:80!important}
+  .nav button{min-width:0!important;width:100%!important;min-height:51px!important;padding:6px 1px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;text-align:center!important;white-space:normal!important;line-height:1.15!important;font-size:10px!important;letter-spacing:-.025em!important;transform:none!important;border-radius:15px!important}
+  .nav .ico{display:block!important;font-size:19px!important;line-height:1!important;width:auto!important}
+  .main{width:100%!important;max-width:100%!important;min-width:0!important;padding:7px 15px 125px!important;margin:0!important}
+  .top{margin:0 0 17px!important;gap:6px!important}
+  .top h2{font-size:clamp(27px,7.8vw,36px)!important;line-height:1.07!important;letter-spacing:-.055em!important;overflow-wrap:anywhere}
+  .home-hero{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;min-height:0!important;padding:23px 19px 21px!important;border-radius:26px!important;overflow:hidden!important}
+  .home-hero .hero-copy{width:100%!important;max-width:100%!important;position:relative!important;z-index:2!important}
+  .home-hero h3{font-size:clamp(25px,7.6vw,34px)!important;line-height:1.08!important;max-width:100%!important;margin:11px 0 10px!important}
+  .home-hero p{font-size:13px!important;line-height:1.5!important;max-width:100%!important}
+  .hero-meta{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important;margin-top:16px!important}
+  .hero-pill{display:flex!important;justify-content:center!important;align-items:center!important;gap:5px!important;padding:9px 8px!important;font-size:11px!important;line-height:1.25!important;text-align:center!important;min-width:0!important;white-space:normal!important;animation:none!important}
+  .hero-pill:last-child{grid-column:1/-1!important}
+  .hero-ambient{position:relative!important;right:auto!important;top:auto!important;height:145px!important;width:100%!important;min-height:0!important;margin:0!important;overflow:hidden!important;max-width:none!important;opacity:1!important}
+  .hero-card{min-width:0!important;width:32%!important;max-width:132px!important;padding:11px 10px!important;border-radius:17px!important;gap:4px!important}
+  .hero-card small{font-size:9px!important;line-height:1.2!important}.hero-card b{font-size:20px!important}.hero-card span{font-size:10px!important;line-height:1.2!important}
+  .hero-card.c1{left:1%!important;top:16%!important}.hero-card.c2{right:0!important;top:28%!important}.hero-card.c3{left:34%!important;bottom:3%!important}
+  .hero-orb-core{width:185px!important;height:185px!important;right:11%!important;top:-10%!important}
+  .hero-shine{width:90px!important;height:90px!important}
+  .capture{display:flex!important;align-items:center!important;gap:7px!important;padding:8px!important;min-width:0!important;border-radius:19px!important}
+  .capture .capture-icon{display:grid!important;width:27px!important;flex:0 0 27px!important;font-size:15px!important}
+  .capture input.field{width:100%!important;min-width:0!important;flex:1 1 auto!important;font-size:14px!important;padding:10px 8px!important}
+  .capture .btn{flex:0 0 auto!important;padding:11px 12px!important;font-size:12px!important;white-space:nowrap!important}
+  .home-grid,.two{grid-template-columns:minmax(0,1fr)!important;gap:11px!important}
+  .panel{min-width:0!important;padding:16px!important;border-radius:23px!important}
+  .panel-head{gap:8px!important}.panel-head h3{font-size:17px!important}
+  .task-card{padding:13px!important}.task-title{font-size:14px!important;line-height:1.35!important}
+  .task-tools{gap:7px!important}
+  .status-field{min-width:0!important}
+  .schedule-layout{grid-template-columns:minmax(0,1fr)!important}
+  .shift-calendar{min-width:0!important}
+  .shift-cal-day{min-width:0!important;overflow:hidden!important}
+  .modal-layer{z-index:100!important}
+  /* Cloud indicator sits above bottom navigation and never overlays the wordmark */
+  #cloud-indicator{position:fixed!important;top:auto!important;bottom:calc(82px + env(safe-area-inset-bottom,0px))!important;left:auto!important;right:15px!important;margin:0!important;z-index:79!important;padding:6px 10px!important;border-radius:16px!important;max-width:76vw!important;gap:6px!important;font-size:10px!important;background:rgba(255,255,255,.81)!important;box-shadow:0 5px 16px rgba(107,92,28,.08)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important}
+  #cloud-indicator button{padding:3px 6px!important;font-size:10px!important}
+  body.cloud-ready .brand{padding-right:0!important}
+}
+@media(max-width:370px){
+  .main{padding-left:11px!important;padding-right:11px!important}
+  .nav{left:6px!important;right:6px!important}
+  .nav button{font-size:9px!important}
+  .hero-card{padding:9px 8px!important}
+  .hero-card b{font-size:17px!important}
+  .hero-meta{grid-template-columns:1fr!important}
+  .hero-pill:last-child{grid-column:auto!important}
+}
+
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script></head><body><div id="cloud-gate"><section class="cloud-login" role="region" aria-label="Вход в Meren Coffee"><h1>meren<span style="color:#eac62f">.</span></h1><div class="cloud-sub">Твоё рабочее пространство. Войди с одной почтой и паролем на телефоне и компьютере.</div><form id="cloud-auth-form"><label for="cloud-email">Почта</label><input id="cloud-email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="cloud-password">Пароль</label><input id="cloud-password" type="password" minlength="6" autocomplete="current-password" required placeholder="Не менее 6 символов"><button class="cloud-submit" id="cloud-submit" type="submit">Войти</button></form><button class="cloud-switch" id="cloud-switch" type="button">Первый раз? Создать аккаунт</button><div class="cloud-message" id="cloud-message" role="status"></div><div class="cloud-note">Данные доступны только после входа. Для первой настройки сначала заполни файл config.js и выполни SQL-команду из архива в Supabase.</div></section></div><div class="app"><aside class="aside"><div class="brand"><h1>meren<span class="dot">.</span></h1></div><nav class="nav" id="nav"></nav><div class="aside-foot"><button class="settings-link" onclick="openSettings()">⚙ Настройки и данные</button></div></aside><main class="main" id="main"></main></div><div class="modal-layer" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modal-head"><h3 id="modalTitle"></h3><button class="modal-close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div><input type="file" id="importFile" hidden accept=".csv,.tsv,.json,.xlsx,.xls,.pdf,.txt,.png,.jpg,.jpeg" multiple><input type="file" id="restoreFile" hidden accept=".json"><script>
 const KEY='meren_workspace_v1';let state={tasks:[],shifts:[],suppliers:[],files:[]},view='home',filters={status:'all',priority:'all',q:''},selectedFile=null,calendarOffset=0,taskMode='list';
 const tabs=[['home','⌂','Обзор'],['tasks','✓','Задачи'],['calendar','▦','Календарь'],['shifts','◷','График'],['suppliers','◈','Поставщики'],['files','▤','Документы']];
